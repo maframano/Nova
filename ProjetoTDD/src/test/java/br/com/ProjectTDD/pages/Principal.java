@@ -19,6 +19,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 
 import Negocio.BeforeClasse;
+import Pages.LoginPages;
 
 public class Principal {
 
@@ -34,6 +35,18 @@ public class Principal {
 		}
 		
 		@Test
+		public void CadastroDeUsuario() {
+			new LoginPages(navegador) 
+				.LoginCadastroPage()
+				.DadosCadastraisPage()
+				.confirmaNomeCadastradoAoladoDoUser();
+				
+				
+			
+			
+		}
+		
+		//@Test
 		public void TestePesquisaPagina(){
 		
 			//clicar na categoria SPEAKERS
@@ -42,7 +55,7 @@ public class Principal {
 			
 			//comparar se o produto esperado é o produto realmente encontrado
 	
-			assertEquals("Resultado esperado: ", 1, 1);
+			//assertEquals("Resultado esperado: ", 1, 1);
 		}
 		
 		@After
