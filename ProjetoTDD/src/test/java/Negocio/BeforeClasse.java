@@ -1,5 +1,7 @@
 package Negocio;
 
+import java.util.concurrent.TimeUnit;
+
 //import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -16,8 +18,10 @@ public class BeforeClasse {
 
 		 //achando a pagina que se quer testar
 		 WebDriver navegador = new ChromeDriver();
-         navegador.get("https://advantageonlineshopping.com/#/");
-         
+         //navegador.get("https://advantageonlineshopping.com/#/");
+         navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+         navegador.manage().window().maximize();   
+         navegador.get("https://www.advantageonlineshopping.com/#/");
          return navegador;
  } 
 }

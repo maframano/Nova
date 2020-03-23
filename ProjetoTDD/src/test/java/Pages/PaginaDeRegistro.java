@@ -1,18 +1,22 @@
 package Pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class PaginaDeRegistro  {
+public class PaginaDeRegistro extends BasePages {
 
-private WebDriver navegador;
+
 	
 	public PaginaDeRegistro(WebDriver navegador) {
-		this.navegador = navegador;
-		
+		super(navegador);
+		// TODO Auto-generated constructor stub
 	}
-	
+
 	public homePage DadosCadastraisPage() {
+		
+		navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		//Preencer dados em Name ("usernameRegisterPage")
 		
@@ -28,9 +32,11 @@ private WebDriver navegador;
 		navegador.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("1Ben");
 		
 		//Selecionar checkbox name("i_agree")
-		navegador.findElement(By.name("confirm_passwordRegisterPage")).click();
+		navegador.findElement(By.name("i_agree")).click();
+		
+		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-		//Clicar em regigter id("register_btnundefined")
+		//Clicar em register id("register_btnundefined")
 		navegador.findElement(By.id("register_btnundefined")).click();
 		
 		return new homePage (navegador);

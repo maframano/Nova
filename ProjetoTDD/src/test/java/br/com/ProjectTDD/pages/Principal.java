@@ -58,10 +58,10 @@ public class Principal {
 			//assertEquals("Resultado esperado: ", 1, 1);
 		}
 		
-		@After
-		   public void fechaNavegador() {
-		      navegador.quit();
-		    }
+		//@After
+		  // public void fechaNavegador() {
+		    //  navegador.quit();
+		   // }
 
 	
 		
