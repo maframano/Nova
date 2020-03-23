@@ -8,14 +8,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BeforeClasse {
 
-	 public static void openBrowser(){
-		 		 
+	 public static WebDriver openBrowser(){
+		//Abre o navegador
+		  
 		 String driverExecutablePath = "C:\\Users\\mafra.romao\\eclipse-workspace\\nova\\ProjetoTDD\\src\\test\\resources\\chromedriver.exe";
 		 System.setProperty("webdriver.chrome.driver", driverExecutablePath);
 
-		 
-		 WebDriver driver = new ChromeDriver();
-         driver.get("https://advantageonlineshopping.com/#/");
+		 //achando a pagina que se quer testar
+		 WebDriver navegador = new ChromeDriver();
+         navegador.get("https://advantageonlineshopping.com/#/");
+         
+         return navegador;
  } 
 }
 
