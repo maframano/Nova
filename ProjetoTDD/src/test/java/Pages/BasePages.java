@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 public class BasePages {
 	
-private WebDriver navegador;
+protected WebDriver navegador;
 	
 	public BasePages(WebDriver navegador) {
 		this.navegador = navegador;

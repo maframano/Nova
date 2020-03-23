@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class homePage extends BasePages {
 
@@ -19,8 +20,8 @@ public class homePage extends BasePages {
 		
 		//inspecionar se ao lado do user className("hi-user containMiniTitle ng-binding") tem o nome
 		//cadastrado em xpath()
-		
-		String actual = navegador.findElement(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']")).getText();
+		WebElement me = navegador.findElement(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']"));
+		String actual = me.getText();
 		//span[@class='hi-user containMiniTitle ng-binding']
 		assertEquals("benedito", actual);
 		return this;
