@@ -21,7 +21,7 @@ public class PaginaDeRegistro extends BasePages {
 
 	public homePage DadosCadastraisPage() {
 		
-		navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		//navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		//Preencer dados em Name ("usernameRegisterPage")
 		
@@ -42,17 +42,15 @@ public class PaginaDeRegistro extends BasePages {
 		navegador.findElement(By.name("last_nameRegisterPage")).sendKeys("Jose");
 		navegador.findElement(By.name("phone_numberRegisterPage")).sendKeys("131111111111");
 
-		navegador.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+		navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		Select combobox = new Select(navegador.findElement(By.name("countryListboxRegisterPage")));
-		//WebElement combobox = navegador.findElement(By.name("countryListboxRegisterPage"));
-		//Select combo = new Select(combobox);	
-		
-		navegador.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+			
+		navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		combobox.selectByVisibleText("Brazil");
 
-		navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		navegador.findElement(By.name("cityRegisterPage")).sendKeys("Sao Vicente");
 		
@@ -68,7 +66,6 @@ public class PaginaDeRegistro extends BasePages {
 		//Selecionar checkbox name("i_agree")
 		navegador.findElement(By.name("i_agree")).click();
 		
-
 		JavascriptExecutor desceAgree = (JavascriptExecutor)navegador;
 		desceAgree.executeScript("window.scrollBy(0,050)");
 		
@@ -80,6 +77,7 @@ public class PaginaDeRegistro extends BasePages {
 		
 		return new homePage (navegador);
 	}	
+	
 	
 //public homePage DadosCadastraisPageNegativo() {
 

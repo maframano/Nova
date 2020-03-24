@@ -2,6 +2,8 @@ package Pages;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +21,7 @@ public class homePage extends BasePages {
 
 	public homePage confirmaNomeCadastradoAoladoDoUser() {
 		
-		
+		navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		//inspecionar se ao lado do user className("hi-user containMiniTitle ng-binding") tem o nome
 		//cadastrado em xpath()
 		WebElement me = navegador.findElement(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']"));
