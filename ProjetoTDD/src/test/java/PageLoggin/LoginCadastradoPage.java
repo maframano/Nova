@@ -16,8 +16,8 @@ public class LoginCadastradoPage extends BasePages {
 	public PaginaDeLogin LoginPage() {
 		navegador.findElement(By.id("menuUserSVGPath")).click();
 		
-		navegador.findElement(By.className("ng-valid ng-scope ng-touched ng-dirty ng-valid-parse")).sendKeys("MafraMano");
-		navegador.findElement(By.name("password")).sendKeys("4Jes");
+		return new PaginaDeLogin(navegador);
+		
 		
 	}
 

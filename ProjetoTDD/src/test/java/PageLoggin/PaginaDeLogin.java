@@ -1,6 +1,6 @@
 package PageLoggin;
 
-import org.openqa.selenium.By;
+//import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import Negocio.BasePages;
@@ -12,8 +12,8 @@ public class PaginaDeLogin extends BasePages{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public ? 
+	//public ? 
 
-	navegador.findElement(By.className("ng-valid ng-scope ng-touched ng-dirty ng-valid-parse")).sendKeys("MafraMano");
-	navegador.findElement(By.name("password")).sendKeys("4Jes");
+	//navegador.findElement(By.className("ng-valid ng-scope ng-touched ng-dirty ng-valid-parse")).sendKeys("MafraMano");
+	//navegador.findElement(By.name("password")).sendKeys("4Jes");
 }

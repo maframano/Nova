@@ -1,12 +1,9 @@
 package Pages;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import Negocio.BasePages;
 
@@ -42,7 +39,9 @@ public class PaginaDeRegistro extends BasePages {
 		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		//Clicar em register id("register_btnundefined")
-		navegador.findElement(By.id("register_btnundefined")).click();
+		
+		navegador.switchTo().alert().accept();
+		//navegador.findElement(By.id("register_btnundefined")).click();
 		
 		return new homePage (navegador);
 	}	
@@ -70,8 +69,9 @@ public homePage DadosCadastraisPageNegativo() {
 		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		//Clicar em register id("register_btnundefined")
-		navegador.findElement(By.id("register_btnundefined")).click();
-		
+		//navegador.findElement(By.id("register_btnundefined")).click();
+		//elementToBeClickable(By.id("register_btnundefined"));
+		navegador.switchTo().alert().accept();
 		
 		
 		return new homePage (navegador);
