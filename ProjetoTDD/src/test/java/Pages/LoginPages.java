@@ -2,7 +2,10 @@ package Pages;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Negocio.BasePages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

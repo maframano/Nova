@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Negocio.BasePages;
+
 public class homePage extends BasePages {
 
 
@@ -26,6 +28,16 @@ public class homePage extends BasePages {
 		assertEquals("benedito", actual);
 		return this;
 		
+	}
+	
+	//comparar se o usuario ja existe
+	public homePage confirmaNomeCadastradoAoladoDoUserNegativo() {
+			WebElement me = navegador.findElement(By.className("center block smollMargin invalid"));
+			String actual = me.getText();
+			//span[@class='hi-user containMiniTitle ng-binding']
+			assertEquals("User name already exists", actual);
+			
+			return this;
 	}
 	
 }

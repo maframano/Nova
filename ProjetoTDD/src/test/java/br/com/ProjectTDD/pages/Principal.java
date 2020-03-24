@@ -47,16 +47,13 @@ public class Principal {
 		}
 		
 		//@Test
-		public void TestePesquisaPagina(){
+		//public void CadastroDeUsuarioNegativo(){
+		//	new LoginPages(navegador)
+	//			.LoginCadastroPage()
+	//			.DadosCadastraisPageNegativo()
+		//		confirmaNomeCadastradoAoladoDoUserNegativo();
+		//}
 		
-			//clicar na categoria SPEAKERS
-			
-			//clicar no produto HP ROAR MINI WIRELESS SPEAKER
-			
-			//comparar se o produto esperado é o produto realmente encontrado
-	
-			//assertEquals("Resultado esperado: ", 1, 1);
-		}
 		
 		//@After
 		  // public void fechaNavegador() {

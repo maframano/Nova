@@ -1,4 +1,4 @@
-package Pages;
+package Negocio;
 
 import org.openqa.selenium.WebDriver;
 
