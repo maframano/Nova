@@ -1,11 +1,16 @@
 package Pages;
 
+import static org.testng.Assert.assertEquals;
+
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 
 import Negocio.BasePages;
@@ -21,7 +26,6 @@ public class PaginaDeRegistro extends BasePages {
 
 	public homePage DadosCadastraisPage() {
 		
-		//navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		//Preencer dados em Name ("usernameRegisterPage")
 		
@@ -34,10 +38,7 @@ public class PaginaDeRegistro extends BasePages {
 		navegador.findElement(By.name("passwordRegisterPage")).sendKeys("1Ben");
 
 		//confirmar a senha ("confirm_passwordRegisterPage")
-		navegador.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("1Ben");
-		
-		
-		
+		navegador.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("1Ben");	
 		navegador.findElement(By.name("first_nameRegisterPage")).sendKeys("benedito");
 		navegador.findElement(By.name("last_nameRegisterPage")).sendKeys("Jose");
 		navegador.findElement(By.name("phone_numberRegisterPage")).sendKeys("131111111111");
@@ -46,8 +47,7 @@ public class PaginaDeRegistro extends BasePages {
 		
 		Select combobox = new Select(navegador.findElement(By.name("countryListboxRegisterPage")));
 			
-		navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		
+		//navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);		
 		combobox.selectByVisibleText("Brazil");
 
 		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -60,30 +60,75 @@ public class PaginaDeRegistro extends BasePages {
 		navegador.findElement(By.name("addressRegisterPage")).sendKeys("Rua Benigno, N 040");
 		navegador.findElement(By.name("state_/_province_/_regionRegisterPage")).sendKeys("SP");
 		navegador.findElement(By.name("postal_codeRegisterPage")).sendKeys("11349440");
-		
-
 
 		//Selecionar checkbox name("i_agree")
 		navegador.findElement(By.name("i_agree")).click();
-		
-		JavascriptExecutor desceAgree = (JavascriptExecutor)navegador;
-		desceAgree.executeScript("window.scrollBy(0,050)");
-		
-		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-		//Clicar em register id("register_btnundefined")
-		
+		//Clicar em register id("register_btnundefined")		
 		navegador.findElement(By.id("register_btnundefined")).click();
 		
 		return new homePage (navegador);
 	}	
 	
 	
-//public homePage DadosCadastraisPageNegativo() {
+public PaginaDeRegistro DadosCadastraisPageNegativo() {
 
-	//}	
+	
+	navegador.findElement(By.name("usernameRegisterPage")).sendKeys("benedito");
+	navegador.findElement(By.name("emailRegisterPage")).sendKeys("beneditojose@hotmail.com");
+	navegador.findElement(By.name("passwordRegisterPage")).sendKeys("1Ben");
+	navegador.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("1Ben");
+	navegador.findElement(By.name("first_nameRegisterPage")).sendKeys("benedito");
+	navegador.findElement(By.name("last_nameRegisterPage")).sendKeys("Jose");
+	navegador.findElement(By.name("phone_numberRegisterPage")).sendKeys("131111111111");
+
+	navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	
+	Select combobox = new Select(navegador.findElement(By.name("countryListboxRegisterPage")));
+		
+	//navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	
+	combobox.selectByVisibleText("Brazil");
+
+	navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	
+	navegador.findElement(By.name("cityRegisterPage")).sendKeys("Sao Vicente");
+	
+	JavascriptExecutor desceRua = (JavascriptExecutor)navegador;
+	desceRua.executeScript("window.scrollBy(0,200)");
+	
+	navegador.findElement(By.name("addressRegisterPage")).sendKeys("Rua Benigno, N 040");
+	navegador.findElement(By.name("state_/_province_/_regionRegisterPage")).sendKeys("SP");
+	navegador.findElement(By.name("postal_codeRegisterPage")).sendKeys("11349440");
+
+	//Selecionar checkbox name("i_agree")
+	navegador.findElement(By.name("i_agree")).click();
+
+	//Clicar em register id("register_btnundefined")	
+	navegador.findElement(By.id("register_btnundefined")).click();
+	
+	return this;
+	
+	}	
+
+	public PaginaDeRegistro ContaJaCriada() {
+		FluentWait espera = new FluentWait(navegador);
+
+		espera.withTimeout(1, TimeUnit.SECONDS);
+		espera.pollingEvery(1000, TimeUnit.MILLISECONDS); 
+		
+		espera.ignoring(NoSuchElementException.class);
+	 
+		WebElement me = navegador.findElement(By.className("center block smollMargin invalid"));
+		String actual = me.getText();
+
+		assertEquals("User name already exists", actual);
+		
+			 
+		return this;
+	}
+
 	
 }
-
 
 

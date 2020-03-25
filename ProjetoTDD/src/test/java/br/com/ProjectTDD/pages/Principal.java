@@ -1,22 +1,9 @@
 package br.com.ProjectTDD.pages;
-import static org.junit.Assert.assertEquals;
-
-
-import java.sql.Driver;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-//import org.junit.BeforeClass;
-import org.junit.Test;
-import org.openqa.selenium.By;
+//import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import Negocio.BeforeClasse;
 import Pages.LoginPages;
@@ -26,7 +13,7 @@ public class Principal {
 	private WebDriver navegador;
 	
 		
-		@Before
+		@BeforeMethod
 		
 		public void openBrowser() {
 		//abreNavegador = new BeforeClasse();
@@ -34,31 +21,28 @@ public class Principal {
 			navegador = BeforeClasse.openBrowser();
 		}
 		
-		@Test
+		//@Test
 		public void CadastroDeUsuario() {
 			new LoginPages(navegador) 
 				.LoginCadastroPage()
 				.DadosCadastraisPage()
 				.confirmaNomeCadastradoAoladoDoUser();
-				
-				
-			
 			
 		}
 		
-		//@Test
-		//public void CadastroDeUsuarioNegativo(){
-		//	new LoginPages(navegador)
-	//			.LoginCadastroPage()
-	//			.DadosCadastraisPageNegativo()
-		//		confirmaNomeCadastradoAoladoDoUserNegativo();
-		//}
+		@Test
+		public void CadastroDeUsuarioNegativo(){
+			new LoginPages(navegador)
+				.LoginCadastroPage()				
+				.DadosCadastraisPageNegativo()
+				.ContaJaCriada();
+		}
 		
 		
-		//@After
-		  // public void fechaNavegador() {
-		    //  navegador.quit();
-		   // }
+	    @AfterMethod
+		   public void fechaNavegador() {
+		      navegador.quit();
+		    }
 
 	
 		

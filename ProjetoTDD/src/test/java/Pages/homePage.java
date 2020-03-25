@@ -1,6 +1,7 @@
 package Pages;
 
-import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,26 +22,18 @@ public class homePage extends BasePages {
 
 	public homePage confirmaNomeCadastradoAoladoDoUser() {
 		
-		navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//inspecionar se ao lado do user className("hi-user containMiniTitle ng-binding") tem o nome
 		//cadastrado em xpath()
 		WebElement me = navegador.findElement(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']"));
 		String actual = me.getText();
 		//span[@class='hi-user containMiniTitle ng-binding']
 		assertEquals("benedito", actual);
+		
 		return this;
 		
 	}
 	
-	//comparar se o usuario ja existe
-	public homePage confirmaNomeCadastradoAoladoDoUserNegativo() {
-			WebElement me = navegador.findElement(By.className("center block smollMargin invalid"));
-			String actual = me.getText();
-			//span[@class='hi-user containMiniTitle ng-binding']
-			assertEquals("User name already exists", actual);
-			
-			return this;
-	}
 	
 }
 
