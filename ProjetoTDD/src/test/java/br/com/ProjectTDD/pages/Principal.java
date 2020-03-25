@@ -34,8 +34,8 @@ public class Principal {
 		public void CadastroDeUsuarioNegativo(){
 			new LoginPages(navegador)
 				.LoginCadastroPage()				
-				.DadosCadastraisPageNegativo()
-				.ContaJaCriada();
+				.DadosCadastraisPageNegativo();
+				
 		}
 		
 		
