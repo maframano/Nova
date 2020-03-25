@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Negocio.BeforeClasse;
+import PageLoggin.LoginCadastradoPage;
 import Pages.LoginPages;
 
 public class Principal {
@@ -30,7 +31,7 @@ public class Principal {
 			
 		}
 		
-		@Test
+		//@Test
 		public void CadastroDeUsuarioNegativo(){
 			new LoginPages(navegador)
 				.LoginCadastroPage()				
@@ -38,6 +39,21 @@ public class Principal {
 				
 		}
 		
+		@Test
+		public void LoginusuarioJaCadastrado(){
+			
+			new LoginCadastradoPage(navegador) 
+				.LoginPage()
+				.preencheDadosUsuario()
+				.confirmaNomeCadastradoAoladoDoUser();
+		}
+		
+		//@Test
+		
+		public void LoginusuarioJaCadastradoNegativo(){
+			
+			
+		}
 		
 	    @AfterMethod
 		   public void fechaNavegador() {

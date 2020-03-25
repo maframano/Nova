@@ -14,6 +14,8 @@ public class LoginCadastradoPage extends BasePages {
 	}
 	
 	public PaginaDeLogin LoginPage() {
+		
+		//clicar em user id("menuUserSVGPath")
 		navegador.findElement(By.id("menuUserSVGPath")).click();
 		
 		return new PaginaDeLogin(navegador);
