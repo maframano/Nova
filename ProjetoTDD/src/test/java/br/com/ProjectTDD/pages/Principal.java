@@ -6,6 +6,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Negocio.BeforeClasse;
+import PageConsultaPorFiltro.PesquisaPorFiltroPaginaInicialPage;
+import PageConsultaPorFiltro.TabletsPage;
 import PageLoggin.LoginCadastradoPage;
 import Pages.LoginPages;
 
@@ -48,7 +50,7 @@ public class Principal {
 				.confirmaNomeCadastradoAoladoDoUser();
 		}
 		
-		@Test
+		//@Test
 		
 		public void LoginusuarioJaCadastradoNegativo() throws InterruptedException{
 			new LoginCadastradoPage(navegador) 
@@ -57,7 +59,23 @@ public class Principal {
 			
 		}
 		
-	    @AfterMethod
+		//@Test
+		public void ConsultaPorFiltro() {
+			new PesquisaPorFiltroPaginaInicialPage(navegador)
+				.pesquisaDeProduto()
+				.pesquisaTablet()
+				.ConfirmaBusca();
+			
+		}
+		
+		public void ConsultaPorFiltroNegativo() {
+				new PesquisaPorFiltroPaginaInicialPage(navegador)
+					.pesquisaDeProdutoNegativo()
+					.confirmaMensagemErro();
+			
+		}
+		
+	   // @AfterMethod
 		   public void fechaNavegador() {
 		      navegador.quit();
 		    }
