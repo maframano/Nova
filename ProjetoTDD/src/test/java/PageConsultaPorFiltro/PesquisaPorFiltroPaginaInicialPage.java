@@ -17,15 +17,15 @@ public class PesquisaPorFiltroPaginaInicialPage extends BasePages{
 
 	public TabletsPage pesquisaDeProduto() {
 		
-		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		navegador.findElement(By.id("menuSearch")).click();
 		
-		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		navegador.findElement(By.id("autoComplete")).sendKeys("tablet");
 		
-		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		navegador.findElement(By.id("autoComplete")).click();
 		
@@ -37,18 +37,19 @@ public class PesquisaPorFiltroPaginaInicialPage extends BasePages{
 	
 public ErroPage pesquisaDeProdutoNegativo(){
 		
-		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		navegador.findElement(By.id("menuSearch")).click();
 		
-		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		navegador.findElement(By.id("autoComplete")).sendKeys("banana");
 		
-		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		navegador.findElement(By.id("autoComplete")).click();
 		
+
+		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		return  new ErroPage(navegador);
 		
@@ -56,4 +57,3 @@ public ErroPage pesquisaDeProdutoNegativo(){
 	}
 	
 }
-//return new LoginHomePage(navegador);

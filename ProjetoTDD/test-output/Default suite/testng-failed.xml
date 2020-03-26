@@ -7,6 +7,7 @@
         <methods>
           <include name="ConsultaPorFiltro"/>
           <include name="openBrowser"/>
+          <include name="fechaNavegador"/>
         </methods>
       </class> <!-- br.com.ProjectTDD.pages.Principal -->
     </classes>
