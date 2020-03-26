@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-25T16:53:57 BRT" name="Default suite" finished-at="2020-03-25T16:54:14 BRT" duration-ms="16477">
+  <suite started-at="2020-03-26T09:38:13 BRT" name="Default suite" finished-at="2020-03-26T09:38:22 BRT" duration-ms="9502">
     <groups>
     </groups>
-    <test started-at="2020-03-25T16:53:57 BRT" name="Default test" finished-at="2020-03-25T16:54:14 BRT" duration-ms="16477">
+    <test started-at="2020-03-26T09:38:13 BRT" name="Default test" finished-at="2020-03-26T09:38:22 BRT" duration-ms="9502">
       <class name="br.com.ProjectTDD.pages.Principal">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:br.com.ProjectTDD.pages.Principal@6f96c77]" started-at="2020-03-25T16:53:57 BRT" name="openBrowser" finished-at="2020-03-25T16:54:06 BRT" duration-ms="8495" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:br.com.ProjectTDD.pages.Principal@be64738]" started-at="2020-03-26T09:38:13 BRT" name="openBrowser" finished-at="2020-03-26T09:38:18 BRT" duration-ms="5828" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="LoginusuarioJaCadastrado()[pri:0, instance:br.com.ProjectTDD.pages.Principal@6f96c77]" started-at="2020-03-25T16:54:06 BRT" name="LoginusuarioJaCadastrado" finished-at="2020-03-25T16:54:13 BRT" duration-ms="7332" status="PASS">
+        <test-method signature="LoginusuarioJaCadastradoNegativo()[pri:0, instance:br.com.ProjectTDD.pages.Principal@be64738]" started-at="2020-03-26T09:38:18 BRT" name="LoginusuarioJaCadastradoNegativo" finished-at="2020-03-26T09:38:21 BRT" duration-ms="2383" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginusuarioJaCadastrado -->
-        <test-method is-config="true" signature="fechaNavegador()[pri:0, instance:br.com.ProjectTDD.pages.Principal@6f96c77]" started-at="2020-03-25T16:54:13 BRT" name="fechaNavegador" finished-at="2020-03-25T16:54:14 BRT" duration-ms="619" status="PASS">
+        </test-method> <!-- LoginusuarioJaCadastradoNegativo -->
+        <test-method is-config="true" signature="fechaNavegador()[pri:0, instance:br.com.ProjectTDD.pages.Principal@be64738]" started-at="2020-03-26T09:38:21 BRT" name="fechaNavegador" finished-at="2020-03-26T09:38:22 BRT" duration-ms="1267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fechaNavegador -->

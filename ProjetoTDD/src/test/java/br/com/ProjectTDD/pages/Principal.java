@@ -39,7 +39,7 @@ public class Principal {
 				
 		}
 		
-		@Test
+		//@Test
 		public void LoginusuarioJaCadastrado(){
 			
 			new LoginCadastradoPage(navegador) 
@@ -48,10 +48,12 @@ public class Principal {
 				.confirmaNomeCadastradoAoladoDoUser();
 		}
 		
-		//@Test
+		@Test
 		
-		public void LoginusuarioJaCadastradoNegativo(){
-			
+		public void LoginusuarioJaCadastradoNegativo() throws InterruptedException{
+			new LoginCadastradoPage(navegador) 
+			.LoginPage()
+			.preencheDadosUsuarioNegativo();
 			
 		}
 		

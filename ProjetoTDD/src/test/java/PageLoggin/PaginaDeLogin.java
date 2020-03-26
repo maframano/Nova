@@ -1,12 +1,17 @@
 package PageLoggin;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 //import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Negocio.BasePages;
+import io.netty.util.Timeout;
 
 public class PaginaDeLogin extends BasePages{
 
@@ -30,6 +35,32 @@ public class PaginaDeLogin extends BasePages{
 	return new LoginHomePage(navegador);
 	
 	}
+	
+	public PaginaDeLogin preencheDadosUsuarioNegativo() throws InterruptedException{ 
+
+	navegador.findElement(By.name("username")).sendKeys("MafraMano");
+	navegador.findElement(By.name("password")).sendKeys("4Jfkdhfkhs");
+	
+	navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+	//clicar no botão SIGN IN sob o id("sign_in_btnundefined")
+	
+	navegador.findElement(By.id("sign_in_btnundefined")).click();
+
+	
+	
+	 Thread.sleep(500);
+	//Verificar mensagem de erro no top
+	WebElement me = navegador.findElement(By.id("signInResultMessage"));
+		String actual = me.getText();
+		assertEquals("Incorrect user name or password.", actual);
+		
+	
+	return this;
+	
+	}
 }
 
 
+
+//assertEquals("User is temporary blocked from login", actual);

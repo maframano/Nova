@@ -6,7 +6,8 @@
       <class name="br.com.ProjectTDD.pages.Principal">
         <methods>
           <include name="openBrowser"/>
-          <include name="LoginusuarioJaCadastrado"/>
+          <include name="LoginusuarioJaCadastradoNegativo"/>
+          <include name="fechaNavegador"/>
         </methods>
       </class> <!-- br.com.ProjectTDD.pages.Principal -->
     </classes>
