@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import Negocio.BeforeClasse;
 import PageConsultaPorFiltro.PesquisaPorFiltroPaginaInicialPage;
 import PageConsultaPorFiltro.TabletsPage;
+import PageConsultaTela.TelaInicial;
 import PageLoggin.LoginCadastradoPage;
 import Pages.LoginPages;
 
@@ -68,7 +69,7 @@ public class Principal {
 			
 		}
 		
-		@Test
+		//@Test
 		public void ConsultaPorFiltroNegativo() {
 				new PesquisaPorFiltroPaginaInicialPage(navegador)
 					.pesquisaDeProdutoNegativo()
@@ -76,7 +77,16 @@ public class Principal {
 			
 		}
 		
-	  //  @AfterMethod
+		@Test
+				public void ConsultaPorTela() {
+					new TelaInicial(navegador)
+					.selecionaProduto()
+					.escolherNotePage()
+					.HpZBookPage();
+					
+				}
+		
+	    @AfterMethod
 		   public void fechaNavegador() {
 		      navegador.quit();
 		    }
