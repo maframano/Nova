@@ -59,7 +59,7 @@ public class Principal {
 			
 		}
 		
-		@Test
+		//@Test
 		public void ConsultaPorFiltro() {
 			new PesquisaPorFiltroPaginaInicialPage(navegador)
 				.pesquisaDeProduto()
@@ -68,7 +68,7 @@ public class Principal {
 			
 		}
 		
-		//@Test
+		@Test
 		public void ConsultaPorFiltroNegativo() {
 				new PesquisaPorFiltroPaginaInicialPage(navegador)
 					.pesquisaDeProdutoNegativo()
@@ -76,7 +76,7 @@ public class Principal {
 			
 		}
 		
-	    @AfterMethod
+	  //  @AfterMethod
 		   public void fechaNavegador() {
 		      navegador.quit();
 		    }

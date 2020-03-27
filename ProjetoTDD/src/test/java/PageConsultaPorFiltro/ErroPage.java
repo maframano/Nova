@@ -17,9 +17,9 @@ public class ErroPage extends BasePages {
 	
 	public ErroPage confirmaMensagemErro() {
 		
-		WebElement me = navegador.findElement(By.className("ng-binding"));
+		WebElement me = navegador.findElement(By.xpath("//*[@id=\"searchPage\"]/div[3]/div/label/span"));
 		String actual = me.getText();
-		assertEquals("No results for banana", actual);
+		assertEquals("No results for "banana"", actual);
 		
 		return this;
 	}

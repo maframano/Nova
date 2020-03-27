@@ -21,11 +21,12 @@ public class HpElitPadInstrucoes extends BasePages{
 	
 	public HpElitPadInstrucoes ConfirmaBusca(){
 		
-		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
-		WebElement me = navegador.findElement(By.className("roboto-regular screen768 ng-binding"));
+		WebElement me = navegador.findElement(By.xpath("//h1[@class='roboto-regular screen768 ng-binding']"));
+		
 		String actual = me.getText();
-		//Compara seo nome do produto esperado
+		//Compara se o nome do produto esperado
 		assertEquals("HP ELITEPAD 1000 G2 TABLET", actual);
 		
 		

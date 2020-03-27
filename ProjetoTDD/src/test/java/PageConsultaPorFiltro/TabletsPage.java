@@ -16,10 +16,13 @@ public class TabletsPage extends BasePages {
 
 	public HpElitPadInstrucoes pesquisaTablet(){
 		
-		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		navegador.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		
-		navegador.findElement(By.xpath("//div[@class='autoCompleteCover']//div//img")).click();
-		navegador.findElement(By.id("16")).click();
+		navegador.findElement(By.xpath("//div[@class='cell categoryRight']//li[1]")).click();
+		
+		//navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		//navegador.findElement(By.xpath("//div[@class='cell categoryRight']//li[1]")).click();
 		
 		return new HpElitPadInstrucoes(navegador);
 		
