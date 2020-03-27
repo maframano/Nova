@@ -19,7 +19,8 @@ public class ErroPage extends BasePages {
 		
 		WebElement me = navegador.findElement(By.xpath("//*[@id=\"searchPage\"]/div[3]/div/label/span"));
 		String actual = me.getText();
-		assertEquals("No results for "banana"", actual);
+		String euQuero = "No results for \"banana\"";
+		assertEquals(euQuero, actual);
 		
 		return this;
 	}
