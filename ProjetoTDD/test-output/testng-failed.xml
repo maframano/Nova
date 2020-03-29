@@ -5,8 +5,9 @@
     <classes>
       <class name="br.com.ProjectTDD.pages.Principal">
         <methods>
+          <include name="ConsultaPorTelaNegativo"/>
           <include name="openBrowser"/>
-          <include name="ConsultaPorTela"/>
+          <include name="fechaNavegador"/>
         </methods>
       </class> <!-- br.com.ProjectTDD.pages.Principal -->
     </classes>

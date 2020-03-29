@@ -77,7 +77,7 @@ public class Principal {
 			
 		}
 		
-		@Test
+		//@Test
 				public void ConsultaPorTela() {
 					new TelaInicial(navegador)
 					.selecionaProduto()
@@ -85,6 +85,17 @@ public class Principal {
 					.HpZBookPage();
 					
 				}
+		
+
+		@Test
+				public void ConsultaPorTelaNegativo() {
+					new TelaInicial(navegador)
+					.selecionaProdutoNegativo();
+					
+				}
+		
+
+		
 		
 	    @AfterMethod
 		   public void fechaNavegador() {
