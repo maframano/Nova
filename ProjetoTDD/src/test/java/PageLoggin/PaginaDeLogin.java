@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import Negocio.BasePages;
+import testData.ExtraiDadoExcel;
 
 
 public class PaginaDeLogin extends BasePages{
@@ -19,14 +20,15 @@ public class PaginaDeLogin extends BasePages{
 		// TODO Auto-generated constructor stub
 	}
 	
+	private ExtraiDadoExcel dadosname = new ExtraiDadoExcel();
+	
+
+	public LoginHomePage preencheDadosUsuario() throws Exception{ 
 
 	
-	public LoginHomePage preencheDadosUsuario(){ 
+		navegador.findElement(By.name("username")).sendKeys(dadosname.getUserName());
 		
-		
-
-	navegador.findElement(By.name("username")).sendKeys("MafraMano");
-	navegador.findElement(By.name("password")).sendKeys("4Jes");
+	navegador.findElement(By.name("password")).sendKeys(dadosname.getPassWord());
 	
 	navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	 
