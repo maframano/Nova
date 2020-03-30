@@ -1,6 +1,7 @@
 package PageLoggin;
 
 import static org.testng.Assert.assertEquals;
+
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
@@ -18,7 +19,11 @@ public class PaginaDeLogin extends BasePages{
 		// TODO Auto-generated constructor stub
 	}
 	
+
+	
 	public LoginHomePage preencheDadosUsuario(){ 
+		
+		
 
 	navegador.findElement(By.name("username")).sendKeys("MafraMano");
 	navegador.findElement(By.name("password")).sendKeys("4Jes");

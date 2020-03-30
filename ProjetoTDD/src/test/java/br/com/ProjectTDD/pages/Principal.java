@@ -1,4 +1,5 @@
 package br.com.ProjectTDD.pages;
+import org.junit.runner.RunWith;
 //import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -16,7 +17,7 @@ public class Principal {
 
 	private WebDriver navegador;
 	
-		
+	
 		@BeforeMethod
 		
 		public void openBrowser() {
@@ -87,7 +88,7 @@ public class Principal {
 				}
 		
 
-		@Test
+		//@Test
 				public void ConsultaPorTelaNegativo() {
 					new TelaInicial(navegador)
 					.selecionaProdutoNegativo();
