@@ -46,10 +46,10 @@ public class Principal {
 		//@Test
 		public void LoginusuarioJaCadastrado(){
 			
-			new LoginCadastradoPage(navegador) 
-				.LoginPage()
-				.preencheDadosUsuario()
-				.confirmaNomeCadastradoAoladoDoUser();
+		//	new LoginCadastradoPage(navegador) 
+		//		.LoginPage()
+		//		.preencheDadosUsuario()
+		//		.confirmaNomeCadastradoAoladoDoUser();
 		}
 		
 		//@Test
@@ -61,7 +61,7 @@ public class Principal {
 			
 		}
 		
-		//@Test
+		@Test
 		public void ConsultaPorFiltro() {
 			new PesquisaPorFiltroPaginaInicialPage(navegador)
 				.pesquisaDeProduto()

@@ -31,7 +31,7 @@ public class HpElitPadInstrucoes extends BasePages{
 		//Compara se o nome do produto esperado
 		assertEquals("HP ELITEPAD 1000 G2 TABLET", actual);
 		
-		String screenShotArquivo = "src/test/resources/TestReport/Taskit\" + Generator.dataHoraParaArquivo() + \"ConsultaPorFiltro.png";
+		String screenShotArquivo = "src/test/resources/TestReport/Taskit/" + Generator.dataHoraParaArquivo() + "ConsultaPorFiltro.png";
 		
 		ScreenShot.tirar(navegador, screenShotArquivo );
 		
