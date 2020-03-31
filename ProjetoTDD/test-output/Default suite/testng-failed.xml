@@ -5,9 +5,9 @@
     <classes>
       <class name="br.com.ProjectTDD.pages.Principal">
         <methods>
-          <include name="ConsultaPorFiltro"/>
           <include name="openBrowser"/>
           <include name="fechaNavegador"/>
+          <include name="LoginusuarioJaCadastrado"/>
         </methods>
       </class> <!-- br.com.ProjectTDD.pages.Principal -->
     </classes>

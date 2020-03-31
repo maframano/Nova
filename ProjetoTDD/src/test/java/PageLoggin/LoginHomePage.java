@@ -26,7 +26,7 @@ public LoginHomePage confirmaNomeCadastradoAoladoDoUser() {
 		WebElement me = navegador.findElement(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']"));
 		String actual = me.getText();
 		//span[@class='hi-user containMiniTitle ng-binding']
-		assertEquals("MafraMano", actual);
+		assertEquals("benedito", actual);
 		
 		return this;
 		

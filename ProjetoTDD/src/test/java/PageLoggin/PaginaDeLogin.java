@@ -32,7 +32,7 @@ public class PaginaDeLogin extends BasePages{
 	
 	navegador.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	 
-	//clicar no botão SIGN IN sob o id("sign_in_btnundefined")
+	//clicar no botão SIGN IN sob o id("sign_in_btnundefined") sign_in_btnundefined
 	
 	navegador.findElement(By.id("sign_in_btnundefined")).click();
 	
