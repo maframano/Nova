@@ -13,7 +13,9 @@ public class BeforeClasse {
 	 public static WebDriver openBrowser(){
 		//Abre o navegador
 		  
-		 String driverExecutablePath = "C:\\Users\\mafra.romao\\eclipse-workspace\\nova\\ProjetoTDD\\src\\test\\resources\\chromedriver.exe";
+		 String driverExecutablePath = "/ProjetoTDD/src/test/resources/chromedriver.exe";
+		 
+		 //C:\Users\Mafra\eclipse-workspace\Nova\ProjetoTDD\src\test\resources
 		 System.setProperty("webdriver.chrome.driver", driverExecutablePath);
 
 		 //achando a pagina que se quer testar
