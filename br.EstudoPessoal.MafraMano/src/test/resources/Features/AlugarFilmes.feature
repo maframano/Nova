@@ -1,13 +1,13 @@
 # language: pt
 Funcionalidade: Alugar Filme
-  Como usu·rio
+  Como usuario
   Eu quero cadastrar aluguel de filmes
-  Para controlar preÁo e data de entregas
+  Para controlar preco e data de entregas
   
-  Cen·rio: Deve alugar um filme com sucesso
+  Cen√°rio: Deve alugar um filme com sucesso
   Dado um filme com estoque de 2 unidades
-  E que o preÁo do alugue seja R$ 3
+  E que o preco do alugue seja R$ 3
   Quando alugar
-  Ent„o o preÁo do alugue ser· R$3
-  E a data de entrega ser· no dia seguinte
-  E o estoque do filme ser· 1 unidade
+  Ent√£o o pre√ßo do alugue ser√° R$3
+  E a data de entrega ser√° no dia seguinte
+  E o estoque do filme sera 1 unidade
